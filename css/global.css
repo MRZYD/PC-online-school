@@ -56,6 +56,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .mt5 {margin-top: 5px;}
 .mr5 {margin-right: 5px;}
 .ml5 {margin-left: 5px;}
+.mb5 {margin-bottom: 5px;}
 .pb5 {padding-bottom: 5px;}
 .mt10 {margin-top: 10px;}
 .mr10 {margin-right: 10px;}
@@ -82,6 +83,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .mr50 {margin-right: 50px;}
 .mb50 {margin-bottom: 50px;}
 .mb60 {margin-bottom: 60px;}
+.mt60 {margin-top: 60px;}
 .ml50 {margin-left: 50px;}
 .pt5 {padding-top: 5px;}
 .pt10 {padding-top: 10px;}
@@ -121,6 +123,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*========== theam ==========*/
 .c-blue {color:#67759b;}
 .c-red {color: #f04040;}
+.c-222 {color: #222;}
 .c-333 {color: #333;}
 .c-666 {color: #666;}
 .c-999 {color: #999;}

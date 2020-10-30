@@ -42,7 +42,7 @@
                                 <li>公办院校</li>
                                 <li>企业培训</li>
                             </ul> -->
-                            <a id="try-reg" href="javascript:;" class="n-b-try">获取免费测试账号/在线教育解决方案 <div class="arrow-icon"></div></a>
+                            <a id="try-reg" @click="openPopup" href="javascript:;" class="n-b-try">获取免费测试账号/在线教育解决方案 <div class="arrow-icon"></div></a>
                         </div>
                     </div>
                     <article class="banner_list pa">
@@ -104,7 +104,7 @@
                             </div>
                             <span class="tit-icon-right ml30"></span>
                         </div>
-                        <div class="section-btn-blue">
+                        <div class="section-btn-blue" @click="openKfPopup">
                             <span class="fsize16">获取详细功能列表</span>
                             <img class="ml10" src="./images/arrow-right-icon.png " alt="">
                         </div>
@@ -118,14 +118,14 @@
                                     <div class="li-one-sec mt15 fsize16 c-666">
                                         <span v-for="(labeltext, index) in item.label">{{labeltext}}</span>
                                     </div>
-                                    <div class="li-one-btn fsize14">咨询详情</div>
+                                    <div class="li-one-btn fsize14" @click="openKfPopup">咨询详情</div>
                                 </li>
                                 
                             </ul>
                         </div>
                         <div class="section-btn-box">
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
                         </div>
                     </div>
                 </div>
@@ -152,8 +152,8 @@
                         </ul>
                     </div>
                     <div class="section-btn-box">
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
                     </div>
                 </div>
             </div>
@@ -180,8 +180,8 @@
                             </ul>
                         </div>
                         <div class="section-btn-box">
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
                         </div>
                     </div>
                 </div>
@@ -222,8 +222,8 @@
                                                 </div>
                                             </div>
                                             <div class="section-btn-box" style="margin: 80px 0 0;">
-                                                <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                                                <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
+                                                <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                                                <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
                                             </div>
                                         </div>
                                     </li>
@@ -257,8 +257,8 @@
                             </ul>
                         </div>
                         <div class="section-btn-box">
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
                         </div>
                     </div>
                 </div>
@@ -287,8 +287,8 @@
                         </ul>
                     </div>
                     <div class="section-btn-box">
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用录播功能</div>
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用录播功能</div>
                     </div>
                 </div>
                 <div class="section-box">
@@ -330,8 +330,8 @@
                         </div>
                     </div>
                     <div class="section-btn-box">
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用考试功能</div>
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用考试功能</div>
                     </div>
                 </div>
                 <div class="section-box">
@@ -358,8 +358,8 @@
                         <div class="swiper-button-prev"></div>
                     </div>
                     <div class="section-btn-box">
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用应用工具</div>
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用应用工具</div>
                     </div>
                 </div>
                 <div class="section-box section-box-bottom">
@@ -385,8 +385,8 @@
                         </ul>
                     </div>
                     <div class="section-btn-box">
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
-                        <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用数据功能</div>
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用数据功能</div>
                     </div>
                 </div>
             </div>
@@ -417,8 +417,8 @@
                             </ul>
                         </div>
                         <div class="section-btn-box">
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询服务详情</div>
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询服务详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
                         </div>
                     </div>
                 </div>
@@ -456,8 +456,8 @@
                             </ul>
                         </div>
                         <div class="section-btn-box">
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询合作详情</div>
-                            <div class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询合作详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
                         </div>
                     </div>
                 </div>
@@ -495,37 +495,98 @@
                             </ul>
                         </div>
                         <div class="thi-sec-right">
-                            <input class="sec-right-input mb20" placeholder="请输入您的称呼" type="text">
-                            <input class="sec-right-input mb20" placeholder="请输入您的手机号（必填）" type="text">
-                            <textarea class="sec-right-input textarea mb20" placeholder="请输入您的要求" cols="" rows="3"></textarea>
-                            <div class="sec-right-btn fsize20 c-fff">免费领取测试账号和解决方案</div>
+                            <input class="userName sec-right-input mb20" v-model="username" placeholder="请输入您的称呼" type="text" >
+                            <input class="mobile sec-right-input mb20" v-model="usertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                            <textarea class="mobileSmall sec-right-input textarea mb20" v-model="userneed" placeholder="请输入您的要求" cols="" rows="3"></textarea>
+                            <div class="sec-right-btn fsize20 c-fff" @click="submitForm">免费领取测试账号和解决方案</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 机器人 -->
+            <section class="consult_wrap">
+                <a href="javascript:;" class="dis robot-a" onclick="window.open('https://tb.53kf.com/code/client/e49613946bf78d7197f3af52fac2e1986/1','newwindow', 'toolbar=no,scrollbars=yes,location=no,resizable=no,top=200,left=300,width=800,height=600')">
+                    <span class="a-span fsize16">网校搭建在线咨询</span>
+                    <!-- <img class="disIb vam" src="../../img/robot.png"> -->
+                    <div class="robot-head"></div>
+                </a>
+                <div class="consult_robot">
+                    <a id="try-reg-robot" href="javascript:;">
+                        <ul class="robot-sec">
+                            <li><p>行业成功案例</p></li>
+                            <li><p>获取解决方案</p></li>
+                            <li><p>查看报价资料</p></li>
+                            <li><p>免费试用15天</p></li>
+                        </ul>
+                        <div class="robet-tel-tit">全国咨询热线</div>
+                        <div class="robot-tel">
+                            <img class="robot-tel-icon" src="/images/robot-tel-icon.png" alt="">
+                            <p class="robot-tel-text">400-0620-268</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+    
+            <!--试用注册-->
+            <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+                <div class="tryoutBox">
+                    <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+                    <div class="left-text">
+                        <h2>注册成功您可以获得</h2>
+                        <p>1、网校全功能产品试用账号  </p>
+                        <p>2、金牌IT顾问1对1专属服务</p>
+                        <p>3、量身定制在线教育解决方案</p>
+                    </div>
+                    <div class="applyForm-box">
+                        <span class="tryLogo">在线开通 免费体验</span>
+                        <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                        <form name="applyForm" method="post" enctype="multipart/form-data">
+                            <section class="trial-ab-form">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                        </label>
+                                    </li>
+                                </ul>
+                                <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                                <div class="trialBtn">
+                                    <input type="button" id="subBtn" class="suBtn" value="开通免费试用账号"  @click="submitForm">
+                                </div>
+                            </section>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
         <script>
-            // //百度咨询代码
-            // (function() {
-            //     var _53code = document.createElement("script");
-            //     _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/1";
-            //     var s = document.getElementsByTagName("script")[0]; 
-            //     s.parentNode.insertBefore(_53code, s);
-            // })();
+            //百度咨询代码
+            (function() {
+                var _53code = document.createElement("script");
+                _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/1";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(_53code, s);
+            })();
 
-            // //百度统计代码
-            // var _hmt = _hmt || [];
-            // (function() {
-            // var hm = document.createElement("script");
-            // hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
-            // var s = document.getElementsByTagName("script")[0]; 
-            // s.parentNode.insertBefore(hm, s);
-            // })();
+            //百度统计代码
+            var _hmt = _hmt || [];
+                (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
         </script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script type="text/babel" src="../js/browser.min.js"></script>
-        <script type="text/babel" src="../js/polyfill.min.js"></script>
+        <script type="text/babel" src="./js/browser.min.js"></script>
+        <script type="text/babel" src="./js/polyfill.min.js"></script>
         
         <script src="./js/index.js"></script>
     </body>

@@ -13,6 +13,9 @@
     .section-thr-box ul li .li-thr-sec {line-height: 34px!important;}
     /* 模块六 */
     .section-six-box ul li .six-sec-box p {line-height: 24px!important;}
+    /* 模块底部 */
+    .footer-w100{height:399px !important;}
+    .footer-w100 .footer-sec-box{margin-top: 80px !important;}
 }
 @media all and (max-width:1550px){
     .netC-banner{height: 510px !important;margin: 0 0 72.25px !important;}
@@ -31,6 +34,10 @@
     .section-ele-box ul li:nth-child(1) .div-border p.ele-text{margin-top: 15px!important;}
     .section-ele-box ul li .div-border .list-sec{margin-top: 20px!important;}
     .section-ele-box ul li .div-border .list-sec .list-sec-li{display: flex;margin-bottom: 15px!important;}
+    /* 模块底部 */
+    .footer-w100{height:357px !important;}
+    .footer-w100 .footer-sec-box{margin-top: 72px !important;}
+    .footer-w100 .copyright-text{bottom:8%!important;}
 }
 @media all and (max-width:1400px){
     .netC-banner{height: 450px !important;margin: 0 0 63.75px !important;}
@@ -48,6 +55,10 @@
     .section-ele-box ul li:nth-child(1) .div-border p.ele-text{margin-top: 10px!important;}
     .section-ele-box ul li .div-border .list-sec{margin-top: 15px!important;}
     .section-ele-box ul li .div-border .list-sec .list-sec-li{display: flex;margin-bottom: 10px!important;}
+    /* 模块底部 */
+    .footer-w100{height:336px !important;}
+    .footer-w100 .footer-sec-box{margin-top: 68px !important;}
+    .footer-w100 .copyright-text{bottom:6%!important;}
 }
 @media all and (max-width:1280px){
     .netC-banner{height: 420px !important;margin: 0 0 59.5px !important;}
@@ -59,6 +70,9 @@
     .section-box-bottom{padding-bottom: 67px !important;}
     /* 模块一 */
     .section-one-box ul li .li-one-sec span{margin-bottom: 9px !important;}
+    /* 模块底部 */
+    .footer-w100{height:315px !important;}
+    .footer-w100 .footer-sec-box{margin-top: 63px !important;}
 }
 /* IE10+ CSS styles go here */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -67,6 +81,17 @@
 }    
 
 #app{background: #fff;}
+
+/** 顶部菜单 */
+.page-menu{width:100%;background:#fff;position: fixed;top: 0;z-index: 50;left:50%;transform: translate(-50%, 0);box-shadow: 0 0 7px rgba(69,77,155,.35);}
+.page-menu .w1200{height: 70px;display:flex;align-items: center;justify-content: space-between;}
+.page-menu .company-logo{width: 73px;height: 41px;display: block;}
+.page-menu span{display:block;height:65px;line-height:70px;border-bottom:3px solid rgba(0,0,0,0);color: #666;font-size: 16px;cursor: pointer;}
+.page-menu span:hover,.page-menu span.hover{color: #2F73F8;border-bottom:3px solid #2F73F8;}
+.page-menu .ontrial-btn{width: 150px;height:50px;line-height: 50px;text-align: center;border-radius: 25px;background: #2F73F8;cursor: pointer;}
+.page-menu .company-tel{display:flex;align-items: center;}
+.page-menu .company-tel img{width: 16px;display: block;}
+.empty-sec{width: 100%;height: 70px;}
 
 /** banner模块*/
 .netC-banner{background:url("/images/solution_banner.png") center center no-repeat;height: 600px;position: relative;/*overflow: hidden;*/color: #fff;margin: 0 0 85px;background-size: cover;}
@@ -353,6 +378,17 @@
 .section-thi-box .thi-sec-right .sec-right-input.textarea{height:90px; padding: 15px 22px;font-family: Arial;}
 .section-thi-box .thi-sec-right .sec-right-btn{width:360px;height:46px;background: linear-gradient(to right, #6778FD , #4E53FC);text-align: center;line-height: 46px;border-radius: 6px;cursor: pointer;}
 
+/* 模块-底部 */
+.footer-w100{width: 100%;height:420px;background: url('/images/footer-sec-bg.png') no-repeat center center;background-size: 100% 101%;position: relative;}
+.footer-w100 .div-body{height: 100%;}
+.footer-w100 .footer-path{width: 100%;padding-top: 60px;display: flex;align-items: center;}
+.footer-w100 .footer-path span{display: inline-block;margin-right: 60px;}
+.footer-w100 .footer-sec-box{width:100%;display: flex;justify-content: space-between;margin-top: 85px;}
+.footer-w100 .footer-sec-box .footer-sec-contact{display: flex;flex-direction: column;}
+.footer-w100 .footer-sec-box .footer-sec-contact span{display: block;}
+.footer-w100 .footer-sec-box .ewm-icon{width: 100px;height: 100px;display: block;}
+.footer-w100 .copyright-text{width:100%;position: absolute;bottom: 10%;left:0;text-align: center;}
+
 /* 20200928 机器人新样式*/
 .consult_wrap{height: 180px;position: fixed;left: 10px;top: 35%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-o-transform: translateY(-50%);-mstransform: translateY(-50%);z-index:99;}
 .consult_wrap>a{  text-decoration:none;  }
@@ -376,7 +412,8 @@
 /* 弹窗 */
 .bg-shadow{background: rgba(0,0,0,0.5);filter: alpha(opacity=30);position: fixed;_position: absolute;height: 100%;width: 100%;top: 0;right: 0;bottom: 0;left: 0;z-index: 11;display: none;}
 .bg-shadow-show{background: rgba(0,0,0,0.5);filter: alpha(opacity=30);position: fixed;_position: absolute;height: 100%;width: 100%;top: 0;right: 0;bottom: 0;left: 0;z-index: 11;display: block;}
-.tryoutBox{width: 980px; height: 488px; position:fixed; top:50%; left:50%; margin:-244px 0 0 -490px;background:#fff;z-index: 9999;border-radius: 5px;}
+.tryoutBox{width: 980px; height: 488px; position:fixed; top:50%; left:50%; margin:-244px 0 0 -490px;background:#fff;z-index: 9999;border-radius: 5px;display: none;}
+.tryoutBox-show{width: 980px; height: 488px; position:fixed; top:50%; left:50%; margin:-244px 0 0 -490px;background:#fff;z-index: 9999;border-radius: 5px;display: block;}
 .left-text {width: 340px; margin: 46px 65px 47px; float: left; color: #fff; height: 395px; background: url('/images/popup-banner.png') round; background-size: cover;}
 .left-text h2 {line-height: 30px; font-size: 30px; margin-top: 60px;margin-left: 28px; margin-bottom: 30px; font-weight: bold;}
 .left-text p {font-size:17px;line-height:48px;margin-left: 25px;}

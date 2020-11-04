@@ -478,10 +478,14 @@ var app = new Vue({
             usertel: '',
             userneed: '',
             popusername: '',
-            popusertel: ''
+            popusertel: '',
+            menuSec: '#home',
         }
     },
     created() {
+        $(document).ready(function(){
+            $(window).scrollTop(0)
+        })
     },
     mounted() {
         let that = this;
@@ -518,6 +522,27 @@ var app = new Vue({
         openKfPopup(){
             window.open('https://tb.53kf.com/code/client/e49613946bf78d7197f3af52fac2e1986/1','newwindow', 'toolbar=no,scrollbars=yes,location=no,resizable=no,top=200,left=300,width=800,height=600')
         },
+
+        goAnchor(selector) {
+            let that = this;
+            that.menuSec = selector;
+            console.log(that.menuSec)
+            let windowWidth = document.body.clientWidth;
+            let anchor = that.$el.querySelector(selector)
+            let cale = 1;
+            if(windowWidth <= 1700 && windowWidth > 1550){
+                cale = 0.95;
+            }else if(windowWidth <= 1550 && windowWidth > 1400){
+                cale = 0.85;
+            }else if(windowWidth <= 1400 && windowWidth > 1280){
+                cale = 0.80;
+            }else if(windowWidth <= 1280){
+                cale = 0.75;
+            }
+            let offsetTop = parseFloat(anchor.offsetTop * cale) - parseFloat(70 * cale);
+            document.documentElement.scrollTop = offsetTop;
+        },
+         
 
         closePopup(){
             let that = this;

@@ -26,8 +26,23 @@
     </head>
     <body>
         <div id="app" class="">
-            <!-- <div class="w1200 pagezoom page-menu"></div> -->
-            <section id="item1" class="netC-banner">
+            <div class="page-menu">
+                <div class="w1200 pagezoom">
+                    <img class="company-logo" src="/images/company-logo.png" alt="">
+                    <span :class="menuSec == '#home' ? 'hover' : ''" @click="goAnchor('#home')">首页</span>
+                    <span :class="menuSec == '#student' ? 'hover' : ''" @click="goAnchor('#student')">招生获客</span>
+                    <span :class="menuSec == '#live' ? 'hover' : ''" @click="goAnchor('#live')">直播教学</span>
+                    <span :class="menuSec == '#test' ? 'hover' : ''" @click="goAnchor('#test')">考试题库</span>
+                    <span :class="menuSec == '#service' ? 'hover' : ''" @click="goAnchor('#service')">服务流程</span>
+                    <span :class="menuSec == '#case' ? 'hover' : ''" @click="goAnchor('#case')">成功案例</span>
+                    <div class="ontrial-btn fsize16 c-fff" @click="openPopup">免费试用15天</div>
+                    <div class="company-tel fsize16 c-666"><img class="mr10" src="/images/company-tel.png" alt="">400-0620-268</div>
+                </div>
+            </div>
+            <div class="pagezoom">
+                <div class="empty-sec"></div>
+            </div>
+            <section id="home" class="netC-banner">
                 <div class="w1200 pagezoom pr">
                     <div class="banner-txt">
                         <div class="fl banner-txt-left">
@@ -157,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="thr-w100 pagezoom">
+            <div id="student" class="thr-w100 pagezoom">
                 <div class="div-body w1200">
                     <div class="section-box section-box-bottom">
                         <div class="section-tit-box">
@@ -186,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="four-w100 pagezoom">
+            <div id="live" class="four-w100 pagezoom">
                 <div class="div-body w1200">
                     <div class="section-box">
                         <div class="section-tit-box">
@@ -291,7 +306,7 @@
                         <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用录播功能</div>
                     </div>
                 </div>
-                <div class="section-box">
+                <div class="section-box" id="test">
                     <div class="section-tit-box">
                         <span class="tit-icon-left mr30"></span>
                         <div class="tit-sec-box">
@@ -390,7 +405,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ten-w100 pagezoom">
+            <div class="ten-w100 pagezoom" id="service">
                 <div class="div-body w1200">
                     <div class="section-box">
                         <div class="section-tit-box">
@@ -462,7 +477,7 @@
                     </div>
                 </div>
             </div>
-            <div class="thw-w100 pagezoom">
+            <div class="thw-w100 pagezoom" id="case">
                 <div class="div-body pagezoom w1200">
                     <div class="section-box">
                         <div class="section-tit-box">
@@ -503,6 +518,33 @@
                     </div>
                 </div>
             </div>
+            <div class="pagezoom footer-w100">
+                <div class="div-body w1200">
+                    <div class="footer-path">
+                        <span class="fsize16 c-fff">首页</span>
+                        <span class="fsize16 c-fff">招生获客</span>
+                        <span class="fsize16 c-fff">直播教学</span>
+                        <span class="fsize16 c-fff">考试题库</span>
+                        <span class="fsize16 c-fff">服务流程</span>
+                        <span class="fsize16 c-fff">成功案例</span>
+                    </div>
+                    <div class="footer-sec-box">
+                        <div class="footer-sec-contact">
+                            <h2 class="fsize14 c-fff mb5">联系我们</h2>
+                            <span class="fsize14 c-fff mb5">联系电话：400-0620-268</span>
+                            <span class="fsize14 c-fff mb5">商务邮箱：shichang@268xue.com</span>
+                        </div>
+                        <img class="ewm-icon" src="/images/ewm-icon.png" alt="">
+                        <div>
+                            <h2 class="fsize14 c-fff mb5">行业资讯</h2>
+                            <p class="fsize14 c-fff mb5">1.从【无法复制】的学而思看教育机构如何做大？</p>
+                            <p class="fsize14 c-fff mb5">2.用错位竞争打增量市场，流利说英语抓住了哪些关键点？</p>
+                            <p class="fsize14 c-fff mb5">3.揭秘教培行业中最值钱最神秘的岗位“学科运营”。</p>
+                        </div>
+                    </div>
+                    <div class="copyright-text fsize14 c-fff">©2010-2020 北京易知路科技有限公司 版权所有 京公网安备11010802011695号 京ICP备13029607号</div>
+                </div>
+            </div>
 
             <!-- 机器人 -->
             <section class="consult_wrap">
@@ -512,7 +554,7 @@
                     <div class="robot-head"></div>
                 </a>
                 <div class="consult_robot">
-                    <a id="try-reg-robot" href="javascript:;">
+                    <a id="try-reg-robot" href="javascript:;" @click="openPopup">
                         <ul class="robot-sec">
                             <li><p>行业成功案例</p></li>
                             <li><p>获取解决方案</p></li>
@@ -530,7 +572,7 @@
     
             <!--试用注册-->
             <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
-                <div class="tryoutBox">
+                <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
                     <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
                     <div class="left-text">
                         <h2>注册成功您可以获得</h2>
@@ -585,6 +627,7 @@
             })();
         </script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/babel" src="./js/browser.min.js"></script>
         <script type="text/babel" src="./js/polyfill.min.js"></script>
         

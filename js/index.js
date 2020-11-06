@@ -569,7 +569,7 @@ var app = new Vue({
                 }
             }	
             let requirement = '页面路径：' + window.location.href
-            + '；页面来源：推广页网校页面'
+            + '；页面来源：推广页网校页面PC1'
             + ((!that.userneed) ? '' : ('；备注需求：' + that.userneed)) 
     
             console.log(username);
